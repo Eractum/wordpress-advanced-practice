@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "phishsticks-plus/team-members-group",
+  "title": "Team Members Group",
+  "category": "text",
+  "description": "Adds a group for adding team members",
+  "textdomain": "phishsticks-plus",
+  "attributes": {
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "imageShape": {
+      "type": "string",
+      "default": "hexagon"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "providesContext": {
+    "phishsticks-plus/image-shape": "imageShape"
+  },
+  "example": {
+    "attributes": {
+      "columns": 2
+    },
+    "innerBlocks": [
+      {
+        "name": "phishsticks-plus/team-member",
+        "attributes": {
+          "name": "Bozo",
+          "title": "CEO of clowns",
+          "bio": "A real human being",
+          "imgURL": "https://www.meme-arsenal.com/memes/54dab26ea9527d224d8e8757c9898ccc.jpg"
+        }
+      },
+      {
+        "name": "phishsticks-plus/team-member",
+        "attributes": {
+          "name": "Bozette",
+          "title": "CEO of clowns",
+          "bio": "A real human being",
+          "imgURL": "https://www.meme-arsenal.com/memes/54dab26ea9527d224d8e8757c9898ccc.jpg"
+        }
+      }
+    ]
+  }
+}

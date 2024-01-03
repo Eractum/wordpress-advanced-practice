@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "phishsticks-plus/team-member",
+  "title": "Team Member",
+  "category": "text",
+  "description": "Adds a team member",
+  "textdomain": "phishsticks-plus",
+  "attributes": {
+    "name": {
+      "type": "string",
+      "source": "html",
+      "selector": ".auth-meta strong"
+    },
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": ".auth-meta span"
+    },
+    "bio": {
+      "type": "string",
+      "source": "html",
+      "selector": ".member-bio p"
+    },
+    "imgID": {
+      "type": "number",
+      "default": 0
+    },
+    "imgAlt": {
+      "type": "string",
+      "default": "",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "alt"
+    },
+    "imgURL": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "src"
+    },
+    "socialHandles": {
+      "type": "array",
+      "default": [
+        {
+          "url": "https://facebook.com",
+          "icon": "facebook"
+        },
+        {
+          "url": "https://instagram.com",
+          "icon": "instagram"
+        }
+      ],
+      "source": "query",
+      "selector": ".social-links a",
+      "query": {
+        "url": {
+          "source": "attribute",
+          "attribute": "href"
+        },
+        "icon": {
+          "source": "attribute",
+          "attribute": "data-icon"
+        }
+      }
+    },
+    "imageShape": {
+      "type": "string",
+      "default": "hexagon"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "usesContext": ["phishsticks-plus/image-shape"]
+}

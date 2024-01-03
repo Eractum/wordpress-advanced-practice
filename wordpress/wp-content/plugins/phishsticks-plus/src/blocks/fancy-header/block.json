@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "phishsticks-plus/fancy-header",
+  "title": "Fancy Header",
+  "category": "text",
+  "description": "Adds a hover effect to text",
+  "keywords": ["header", "underline", "hover"],
+  "version": "1",
+  "textdomain": "phishsticks-plus",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    },
+    "underline_color": {
+      "type": "string",
+      "default": "#f87171"
+    }
+  },
+  "style": "file:./index.css"
+}

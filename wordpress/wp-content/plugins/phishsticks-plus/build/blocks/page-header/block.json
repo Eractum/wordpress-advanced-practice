@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "phishsticks-plus/page-header",
+  "title": "Page Header",
+  "category": "text",
+  "description": "Adds a page header",
+  "textdomain": "phishsticks-plus",
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "showCategory": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css"
+}
